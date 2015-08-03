@@ -1,4 +1,4 @@
-# Muni DIfficulty Scale - Android App
+# Muni Difficulty Scale - Android App
 
 Android app for capturing and uploading new trails to muni-scale.info
 
