@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Muni Difficulty Scale</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- fontawesome values -->
+    <string name="icon_heart">&#xf004;</string>
+    <string name="icon_globe">&#xf0ac;</string>
+    <string name="icon_image">&#xf03e;</string>
+    <string name="icon_mscale">&#xf0cb;</string>
+    <string name="icon_area_chart">&#xf1fe;</string>
+    <string name="icon_slack">&#xf198;</string>
+    <string name="icon_cube">&#xf1b2;</string>
+    <string name="icon_caret_up">&#xf0d8;</string>
+
+    <!-- activities -->
+    <string name="title_activity_mscale">M-Scale</string>
+    <string name="title_activity_gpx_logger">GPX Logger</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="characteristics">Characteristics</string>
+    <string name="obstacles">Obstacles</string>
+    <string name="Slope">Slope</string>
+    <string name="underground">Underground</string>
+    <string name="Points">Waypoints</string>
+    <string name="difficulty">Difficulty</string>
+    <string name="error_gpx_file_creation">Could not write file to storage.</string>
+    <string name="error_gpx_file_serialisation">An error occured while serializing the track to GPX</string>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ColorPrimary">#cd5c5c</color> <!-- same colors as on the website -->
+    <color name="ColorPrimaryDark">#891818</color>
+</resources>

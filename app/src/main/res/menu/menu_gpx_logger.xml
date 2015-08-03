@@ -1,0 +1,39 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="info.muni_scale.mdsdroid.gpx.GpxLoggerActivity">
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item
+        android:id="@+id/action_start"
+        android:orderInCategory="5"
+        android:title="Start recording"
+        android:icon="@drawable/ic_record_hdpi"
+        android:visible="true"
+        app:showAsAction="ifRoom">
+    </item>
+    <item
+        android:id="@+id/action_stop"
+        android:orderInCategory="5"
+        android:title="Stop recording"
+        android:icon="@drawable/ic_stop_hdpi"
+        android:visible="false"
+        app:showAsAction="ifRoom">
+    </item>
+    <item
+        android:id="@+id/action_photo"
+        android:orderInCategory="10"
+        android:title="Take photo"
+        android:icon="@drawable/ic_photo_hdpi"
+        android:visible="false"
+        app:showAsAction="ifRoom">
+    </item>
+    <item
+        android:id="@+id/action_poi"
+        android:orderInCategory="50"
+        android:title="Add point of interest"
+        android:icon="@drawable/ic_mapmarker_hdpi"
+        android:visible="false"
+        app:showAsAction="ifRoom">
+    </item>
+</menu>

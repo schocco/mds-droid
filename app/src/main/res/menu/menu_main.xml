@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item
+        android:id="@+id/action_login"
+        android:orderInCategory="10"
+        android:title="Difficulty Calculators"
+        app:showAsAction="ifRoom">
+    </item>
+    <item
+        android:id="@+id/action_mscales"
+        android:orderInCategory="10"
+        android:title="M-Scale"
+        app:showAsAction="ifRoom">
+    </item>
+    <item
+        android:id="@+id/action_gpx_logger"
+        android:orderInCategory="5"
+        android:title="GPX Logger"
+        app:showAsAction="ifRoom">
+    </item>
+    <item
+        android:id="@+id/action_trails"
+        android:orderInCategory="8"
+        android:title="my recorded trails"
+        app:showAsAction="ifRoom">
+    </item>
+</menu>
