@@ -7,8 +7,11 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import info.muni_scale.mdsdroid.gpx.GpxLoggerActivity;
+import info.muni_scale.mdsdroid.gpx.UploadGpxActivity;
 import info.muni_scale.mdsdroid.mscale.MscaleActivity;
 
 
@@ -23,6 +26,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.main_toolbar);
+
+        Button button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, UploadGpxActivity.class);
+                startActivity(intent);
+            }
+        });
         this.setSupportActionBar(toolbar);
     }
 

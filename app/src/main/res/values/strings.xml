@@ -29,4 +29,6 @@
     <string name="difficulty">Difficulty</string>
     <string name="error_gpx_file_creation">Could not write file to storage.</string>
     <string name="error_gpx_file_serialisation">An error occured while serializing the track to GPX</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_upload_gpx">UploadGpxActivity</string>
 </resources>
