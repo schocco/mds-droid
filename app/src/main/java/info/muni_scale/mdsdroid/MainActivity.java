@@ -10,8 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import info.muni_scale.mdsdroid.auth.LoginActivity;
 import info.muni_scale.mdsdroid.gpx.GpxLoggerActivity;
-import info.muni_scale.mdsdroid.gpx.UploadGpxActivity;
 import info.muni_scale.mdsdroid.mscale.MscaleActivity;
 
 
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, UploadGpxActivity.class);
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });

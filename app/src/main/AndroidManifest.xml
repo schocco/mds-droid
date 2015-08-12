@@ -57,6 +57,14 @@
             android:name=".gpx.UploadGpxActivity"
             android:label="@string/title_activity_upload_gpx" >
         </activity>
+        <activity
+            android:name=".auth.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="info.muni_scale.mdsdroid.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

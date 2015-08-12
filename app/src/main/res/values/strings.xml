@@ -31,4 +31,8 @@
     <string name="error_gpx_file_serialisation">An error occured while serializing the track to GPX</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_upload_gpx">UploadGpxActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="success_login_notification">Successfully logged in</string>
+    <string name="error_token_could_not_be_read">Login failed: Access token could not be read</string>
+    <string name="error_no_loginproviders">No login providers available. You might need to update this app.</string>
 </resources>

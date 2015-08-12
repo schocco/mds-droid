@@ -16,15 +16,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/textView"
-            android:text="Upload your trail" />
+            android:id="@+id/loginHeader"
+            android:text="Please log in to proceed" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="You may upload your trail once you have signed in"
-            android:id="@+id/auth_status_txt" />
+            android:text="You can sign in with one of your social media accounts"
+            android:id="@+id/loginTxt" />
     </LinearLayout>
 
     <LinearLayout
@@ -45,7 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="loading available login providers"
+            tools:text="loading auth providers"
             android:id="@+id/get_backends_txt"
             android:gravity="center" />
     </LinearLayout>
