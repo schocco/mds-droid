@@ -13,47 +13,65 @@
         android:layout_gravity="center_horizontal">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/textView"
-            android:text="Upload your trail" />
+            android:text="Trail Name"
+            android:id="@+id/txt_trail_name" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/name_input" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="You may upload your trail once you have signed in"
-            android:id="@+id/auth_status_txt" />
-    </LinearLayout>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Trail description"
+            android:id="@+id/txt_trail_desc" />
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:id="@+id/loginButtonHolder">
-
-        <ProgressBar
-            style="?android:attr/progressBarStyleHorizontal"
+        <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/get_backends_progress_bar"
-            android:indeterminate="true" />
+            android:layout_height="166dp"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/description_input" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Visibility"
+            android:id="@+id/txt_visibility" />
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="loading available login providers"
-            android:id="@+id/get_backends_txt"
-            android:gravity="center" />
+            android:text="You can make your trail private, so that only you can see the trail on the website. You may later change this setting to public."
+            android:id="@+id/txt_private_explanation" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="private"
+            android:id="@+id/chk_private"
+            android:checked="false" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="upload"
+            android:id="@+id/button2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Please note, that trails can&apos;t be accessed through the app when they are not uploaded at the moment. This will be changed in a future version."
+            android:id="@+id/txt_limited_functionality" />
+
     </LinearLayout>
 
-    <WebView
-        android:id="@+id/webview_social_auth"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="invisible">
-    </WebView>
 </FrameLayout>

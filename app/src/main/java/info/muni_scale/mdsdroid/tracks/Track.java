@@ -1,5 +1,7 @@
 package info.muni_scale.mdsdroid.tracks;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,13 +13,21 @@ public class Track {
     private String name;
     private String description;
     private List<TrackSection> sections = new ArrayList<>();
+    private TrackPoint lastFix;
+    private static final String TAG = Track.class.getSimpleName();
 
     public Track() {
         startNewSection();
     }
 
     public void addPoint(TrackPoint point) {
-        sections.get(sections.size()-1).addPoint(point);
+        if(lastFix == null || !lastFix.equals(point)) {
+            lastFix = point;
+            sections.get(sections.size()-1).addPoint(point);
+            Log.d(TAG, "Add point" + point);
+        } else {
+            Log.d(TAG, "Discard point");
+        }
     }
 
     public TrackSection startNewSection() {
@@ -52,18 +62,10 @@ public class Track {
 
     @Override
     public String toString() {
-        StringBuffer sb = new StringBuffer();
-        for(TrackSection seg : sections) {
-            sb.append("<section>\n");
-            for(TrackPoint pt : seg.getPoints()) {
-                sb.append("<Point lat=");
-                sb.append(pt.getLocation().getLatitude());
-                sb.append(" lon=");
-                sb.append(pt.getLocation().getLongitude());
-                sb.append("/>\n");
-            }
-            sb.append("</section>");
+        if(name == null) {
+            return super.toString();
+        } else {
+            return "Track: " + name;
         }
-        return sb.toString();
     }
 }

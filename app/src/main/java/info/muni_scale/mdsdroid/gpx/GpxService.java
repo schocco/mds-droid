@@ -9,7 +9,6 @@ import android.location.LocationManager;
 import android.os.Binder;
 import android.os.Bundle;
 import android.os.IBinder;
-import android.util.Log;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -75,7 +74,6 @@ public class GpxService extends Service implements GpxLogger {
     private void updateLocation(Location location) {
         if(track != null) {
             track.addPoint(new TrackPoint(location));
-            Log.d(TAG, track.toString());
         }
         for(GpxServiceListener listener : serviceListeners) {
             listener.updateLocation(location);

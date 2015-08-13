@@ -16,9 +16,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
-import android.widget.Toast;
-
-import java.io.File;
 
 import info.muni_scale.mdsdroid.R;
 import info.muni_scale.mdsdroid.tracks.Track;
@@ -164,19 +161,11 @@ public class GpxLoggerActivity extends AppCompatActivity implements GpxServiceLi
         // stop recording
         boundService.stopRecording();
         setRecordingState(false);
-        GpxFileWriter fileWriter = new GpxFileWriter(track, this);
-        //TODO: make sure track has a name and description
-        track.setName("track");
-        track.setDescription("description");
-        Toast toast;
-        try {
-            File written = fileWriter.writeFile();
-            toast = Toast.makeText(this, "Track saved to " + written.getAbsolutePath(), Toast.LENGTH_SHORT);
-        } catch (GpxFileWriter.GpxWriterException e) {
-            toast = Toast.makeText(this, "Could not save track :´( ", Toast.LENGTH_SHORT);
-            Log.e(TAG, "Could not save track", e);
-        }
-        toast.show();
+        Intent intent = new Intent(this, UploadGpxActivity.class);
+        startActivity(intent);
+        //TODO: send track as bundle to upload activity
+        //TODO: allow user to finalize rating, replace + button with save icon
+        //TODO: on save icon click, open gpx uploadview
     }
 
 

@@ -35,4 +35,16 @@ public class TrackPoint {
     }
 
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TrackPoint that = (TrackPoint) o;
+        return getAltitude().equals(that.getAltitude()) && getLon().equals(that.getLon()) && getLat().equals(that.getLat());
+    }
+
+    @Override
+    public int hashCode() {
+        return location.hashCode();
+    }
 }
